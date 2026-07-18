@@ -1,4 +1,61 @@
+:root {
+    --font-sans: 'Arial', sans-serif;
+
+    --bahama-aqua: #00b9ae;
+    --bahama-aqua-soft: #73e2d6;
+    --bahama-aqua-deep: #0f8f93;
+    --bahama-black: #050708;
+    --bahama-charcoal: #11171a;
+
+    --color-bg: #ffffff;
+    --color-surface: #ffffff;
+    --color-text: var(--bahama-black);
+    --color-text-muted: #2f3d42;
+    --color-accent: var(--bahama-aqua);
+    --color-accent-hover: var(--bahama-aqua-soft);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    background-color: transparent;
+}
+
+.nav-links a{
+    color: var(--color-text);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent-hover);
 }
