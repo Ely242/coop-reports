@@ -151,7 +151,7 @@ body {
 
 .footer {
     background-color: var(--color-surface);
-    padding: 2rem 4rem;
+    padding: 3rem 4rem;
     text-align: center;
     color: var(--color-text-muted);
     font-size: 0.8125rem;
@@ -159,8 +159,17 @@ body {
 
 main {
     display: flex;
-    margin: 2rem 4rem;
-    padding: 0;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    gap: 4rem;
+    width: 100%;
+}
+
+.intro-about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
@@ -173,14 +182,101 @@ main {
 .content-section-title {
     font-size: 1.5rem;
     font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.content-section-text {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.goals-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.goal-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.75rem;
+    background-color: var(--color-surface);
+    transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.goal-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 12px rgba(0, 185, 174, 0.1);
+}
+
+.goal-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.goal-subtitle {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: 0.5rem;
+}
+
+.goal-description {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.action-plan-list {
+    margin-left: 1.25rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.action-plan-list li {
+    margin-bottom: 0.5rem;
 }
 
 @media (max-width: 600px) {
-    .footer {
+    .navbar {
         padding: 1.5rem 1.25rem;
+    }
+
+    .footer {
+        padding: 2rem 1.25rem;
     }
     .footer p {
         font-size: 0.875rem;
+    }
+
+    main {
+        margin: 1.5rem auto;
+        padding: 0 1.25rem;
+        gap: 2rem;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .goal-card {
+        padding: 1rem;
+    }
+
+    .goal-title {
+        font-size: 1rem;
     }
 }
 
@@ -206,6 +302,20 @@ main {
 
     .hero-text h1 {
         max-width: none;
+    }
+
+    main {
+        margin: 2rem auto;
+        padding: 0 1.25rem;
+        gap: 3rem;
+    }
+
+    .intro-about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
