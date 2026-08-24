@@ -190,6 +190,23 @@ main {
     line-height: 1.6;
 }
 
+.report-subtitle {
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.report-list {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-left: 1.25rem;
+}
+
+.report-list li {
+    margin-bottom: 0.35rem;
+}
+
 .report-section {
     display: grid;
     grid-template-columns: 0.7fr 1.3fr;
@@ -216,6 +233,37 @@ main {
 
 .conclusion-section {
     border-bottom: 1px solid var(--bahama-aqua-soft);
+}
+
+.project-section {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 3rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--bahama-aqua-soft);
+}
+
+.project-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.project-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.project-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.project-detail-title {
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .goals-section {
@@ -345,6 +393,15 @@ main {
     .report-section {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .project-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .project-details {
+        grid-template-columns: 1fr;
     }
 
     .goals-grid {
