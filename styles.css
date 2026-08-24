@@ -190,6 +190,34 @@ main {
     line-height: 1.6;
 }
 
+.report-section {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 3rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--bahama-aqua-soft);
+}
+
+.report-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 70ch;
+}
+
+.section-eyebrow {
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.conclusion-section {
+    border-bottom: 1px solid var(--bahama-aqua-soft);
+}
+
 .goals-section {
     display: flex;
     flex-direction: column;
@@ -312,6 +340,11 @@ main {
 
     .intro-about-section {
         grid-template-columns: 1fr;
+    }
+
+    .report-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .goals-grid {
